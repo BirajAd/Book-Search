@@ -1,0 +1,17 @@
+{% extends 'platform.html' %}
+<link rel="icon" type="image/gif/png" href="book.png">
+
+{% block body %}
+    <form action="{{url_for('log_In')}}" method="get">
+        <div class="form-group">
+            <button class="btn btn-primary">Log In</button>
+        </div>
+    </form>
+
+    <form action="{{url_for('sign_up')}}" method="get">
+        <div class="form-group">
+            <h1>Don't have an Account?</h1>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'platform.html' %}
+
+{% block heading %}
+    Good Reads
+{% endblock %}
+
+{% block body %}
+
+    <h1>Book Detail: </h1>
+
+    <ul>
+        <li>ISBN: {{book.isbn}}</li>
+        <li>Title: {{book.title}}</li>
+        <li>Author: {{book.author}}</li>
+        <li>Year: {{book.year}}</li>
+    </ul>
+{% endblock %}

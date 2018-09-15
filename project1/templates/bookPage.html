@@ -1,0 +1,22 @@
+{% extends 'platform.html' %}
+
+{% block heading %}
+    Good Reads
+{% endblock %}
+
+{% block body %}
+
+        <h1>All Books: </h1>
+
+        <ul>
+            {%for book in books %}
+                <li>
+                    <a href=" {{ url_for('book', isbn=book.isbn) }}">
+                        {{book.title}} By {{book.author}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}
+

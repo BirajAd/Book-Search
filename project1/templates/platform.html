@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Good Reads
+    </title>
+    <link rel="icon" type="image/gif/png" href="http://localhost:63342/Project1/project1/templates/book.png?_ijt=lnu3gb101bkmj34bhbbusek2v">
+
+</head>
+<body>
+
+    {% with messages=get_flashed_messages() %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endwith %}
+
+    <h1>{% block heading %}{% endblock %}</h1>
+
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% extends 'platform.html' %}
+
+{% block heading %}
+    Proceed to Sign Up:
+{% endblock %}
+
+{% block body %}
+
+    <form action="{{url_for('add_user')}}" method="post">
+        <div class="form-group">
+                <input class="form-control" type="text" name="ID" placeholder="user_id">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <input class="form-control" type="text" name="first_name" placeholder="First Name">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <input class="form-control" type="text" name="last_name" placeholder="Last Name">
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Password"><br>
+            Password Rules:
+            <ol>
+                <li>length must be greater than 6 digit</li>
+                <li>Must contain at least one Capital letter</li>
+                <li>Must contain at least one number.</li>
+            </ol>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+{% endblock %}
